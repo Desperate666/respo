@@ -1,0 +1,67 @@
+
+    # def find_btn(self):
+    #     self.label.clear()
+    #     text = self.lineEdit.text()
+    #
+    #     if self.prompt[-1] != text:
+    #         flag = 1
+    #         if self.prompt[-1] == 'XXXXX':
+    #             flag = 0
+    #         self.prompt.append(text)
+    #     else:
+    #         flag = 0
+    #
+    #     textEdit = self.master.tabWidget.currentWidget()
+    #
+    #     if flag:
+    #         textEdit.setLexer(self.previousLexer)
+    #
+    #     # 使用正则表达式搜索
+    #     if self.checkBox.isChecked():
+    #         matches = list(re.finditer(text, textEdit.text()))
+    #         matched_strings = [match.group() for match in matches]
+    #         count = len(matches)
+    #         founded = bool(matches)
+    #         print(matched_strings)
+    #         if matches:
+    #             textEdit.findFirst(matched_strings[self.searchNum % len(matched_strings)], False, True, True, True)
+    #             print("searchNum: ", self.searchNum)
+    #             self.searchNum += 1
+    #             for match in matches:
+    #                 matched_text = match.group()
+    #                 textEdit.highlight_string(matched_text)
+    #         if not founded:
+    #             textEdit.setCursorPosition(0, 0)
+    #             self.searchNum = 0
+    #             matches = list(re.finditer(text, textEdit.text()))
+    #             textEdit.findFirst(matched_strings[0], False, True, True, True)
+    #             founded = bool(matches)
+    #
+    #     else:
+    #         # 高亮搜索字符串
+    #         count = textEdit.highlight_string(text)
+    #         founded = textEdit.findFirst(text, False, True, True, True)
+    #         if not founded:
+    #             textEdit.setCursorPosition(0, 0)
+    #             founded = textEdit.findFirst(text, False, True, True, True)
+    #
+    #     print("count:", count)
+    #     print("founded:", founded)
+    #
+    #     if count:
+    #         self.label.setStyleSheet("QLabel {color: green;}")
+    #         self.label.setText(
+    #             "找到 \"{}\" {} 次".format(
+    #                 self.lineEdit.text(),
+    #                 count
+    #             )
+    #         )
+    #
+    #     if not founded and not count:
+    #         # 如果仍然没有找到，那么显示没有找到的信息
+    #         self.label.setStyleSheet("QLabel {color: red;}")
+    #         self.label.setText(
+    #             "没有找到 \"{}\"".format(
+    #                 self.lineEdit.text()
+    #             )
+    #         )

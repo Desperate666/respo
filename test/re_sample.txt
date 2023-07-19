@@ -1,0 +1,2 @@
+int\s+\w+
+int\s+main\s*\(.*\)
