@@ -288,7 +288,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.treeWidget.clear()
             a = Analysis(fileName, self.config_ini)
             self.token_fun, self.token_val, self.danger, self.infun, self.inval = a.run()
-            showdan = BuildTree(self.treeWidget, "风险函数", self.danger, False, ":/img/img/function.png")
+            showdan = BuildTree(self.treeWidget, "风险", self.danger, False, ":/img/img/risk.png")
             showdan.build()
 
             showinfun = BuildTree(self.treeWidget, "无效函数", self.infun, False, ":/img/img/function.png")
